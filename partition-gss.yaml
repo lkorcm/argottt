@@ -8,7 +8,7 @@ spec:
   updateStrategy:
     rollingUpdate:
       podUpdatePolicy: InPlaceIfPossible
-      partition: 2
+      partition: 0
   gameServerTemplate:
     spec:
       containers:
