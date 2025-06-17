@@ -11,5 +11,5 @@ spec:
   gameServerTemplate:
     spec:
       containers:
-        - image: nginx:1.23
-          name: game-server
+        - image: registry.cn-hangzhou.aliyuncs.com/acs/minecraft-demo:1.12.2
+          name: minecraft
