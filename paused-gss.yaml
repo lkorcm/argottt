@@ -1,0 +1,16 @@
+apiVersion: game.kruise.io/v1alpha1
+kind: GameServerSet
+metadata:
+  name: test-paused
+  namespace: default
+spec:
+  replicas: 2
+  updateStrategy:
+    rollingUpdate:
+      podUpdatePolicy: InPlaceIfPossible
+      paused: true
+  gameServerTemplate:
+    spec:
+      containers:
+        - image: nginx:1.23
+          name: game-server
